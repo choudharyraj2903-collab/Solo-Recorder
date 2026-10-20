@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOLORECORD  ●"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:letterSpacing="0.13"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Your screen.\nYour recording."
+            android:textColor="@color/white"
+            android:textSize="31sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Offline • watermark-free • no account"
+            android:textSize="14sp"
+            android:textColor="@color/secondary" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="19dp">
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ready to record"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="00:00:00"
+                android:fontFamily="monospace"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pause, resume or stop here or from the ongoing notification."
+                android:textColor="@color/secondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="RECORDING SETTINGS"
+            android:textColor="@color/secondary"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Resolution"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <Spinner
+            android:id="@+id/qualitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/quality_labels" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Frame rate"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <Spinner
+            android:id="@+id/fpsSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/fps_labels" />
+        <Switch
+            android:id="@+id/micSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Record microphone narration"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="Filename prefix"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/prefixEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="24"
+            android:inputType="textVisiblePassword"
+            android:text="SoloRecord"
+            android:textColor="@color/white"
+            android:textColorHint="@color/secondary" />
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="●  Start recording"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/button_red" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Pause"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_blue" />
+            <Space android:layout_width="9dp" android:layout_height="1dp" />
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Stop &amp; save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_blue" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/openLastButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:text="Open last recording ↗"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/button_blue" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Videos are stored in Movies/SoloRecord in your phone's gallery. Your microphone is OFF by default. Android may stop screen recording when you lock the phone."
+            android:textColor="@color/secondary"
+            android:textSize="12sp"
+            android:lineSpacingExtra="3dp" />
+    </LinearLayout>
+</ScrollView>

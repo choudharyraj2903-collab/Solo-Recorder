@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoloRecord</string>
+    <string-array name="quality_labels">
+        <item>720p (lighter files)</item>
+        <item>1080p (recommended)</item>
+    </string-array>
+    <string-array name="fps_labels">
+        <item>30 FPS (recommended)</item>
+        <item>60 FPS (smooth motion)</item>
+    </string-array>
+</resources>
